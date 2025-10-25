@@ -1,4 +1,4 @@
-# The farmer was replaced scripts
+# The Farmer Was Replaced
 Author: Simone Ferri (@SimoFerri)
 ## Description
 This repository contains the scripts used to progress inside the game
