@@ -12,8 +12,9 @@ a report that explain which choices have been taken and why I took them.
 This project was created to put into practice the knowledge and techniques I gained during my studies, applying them to a
 complex system that simulates real-world behavior.
 The main goal is to approach each challenge with a professional and methodical mindset, following a clear and repeatable process:
-- **System analysis**: perform a deep understanding of the overall system before implementing any solution.
-- **Problem analysis**: break down each issue into well-defined, measurable components.
-- **Mathematical modeling**: design mathematical models that accurately describe the core mechanics and constraints of each problem.- **Solution profiling**: test and profile different approaches to evaluate their efficiency and scalability.
-- **Reporting**: create detailed reports summarizing the analysis, models, and results for each problem tackled.
+- **System analysis**: perform a deep understanding of the overall system before implementing any solution.\\
+- **Problem analysis**: break down each issue into well-defined, measurable components.\\
+- **Mathematical modeling**: design mathematical models that accurately describe the core mechanics and constraints of each problem.\\
+- **Solution profiling**: test and profile different approaches to evaluate their efficiency and scalability.\\
+- **Reporting**: create detailed reports summarizing the analysis, models, and results for each problem tackled.\\
 This structured workflow bridges academic learning and real-world software development, ensuring clarity, performance, and continuous improvement throughout the project.
