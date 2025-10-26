@@ -13,19 +13,41 @@ entity_ground = {
 }
 
 # Sets the drone position at the specified coordinates
-# note: when unlock the abs function this can be optimized in a clean way
 def set_position(x, y):
-	if not (x >= 0 and x < get_world_size() and y >= 0 and y < get_world_size()):
-		return
+    ws = get_world_size()
+	if not (x >= 0 and x < ws and y >= 0 and y < ws):
+			return
+	
+	drone_x = get_pos_x()
+	drone_y = get_pos_y()
+	if x > drone_x:
+		if abs(x - drone_x) < abs(drone_x + ws - x):
+			x_dir = East
+		else:
+			x_dir = West
+	else:
+		if abs(x - drone_x) < abs(x + ws - drone_x):
+			x_dir = West
+		else:
+			x_dir = East
 		
-	while x < get_pos_x():
-		move(West)
-	while x > get_pos_x():
-		move(East)
-	while y < get_pos_y():
-		move(South)
-	while y > get_pos_y():
-		move(North)
+			
+	if y > drone_y:
+		if abs(y - drone_y) < abs(drone_y + ws - y):
+			y_dir = North
+		else:
+			y_dir = South
+	else:
+		if abs(y - drone_y) < abs(y + ws - drone_y):
+			y_dir = South
+		else:
+			y_dir = North
+			
+	while x != get_pos_x():
+		move(x_dir)
+	while y != get_pos_y():
+		move(y_dir)
+
 
 # This function harvests and replaces the entire farm
 def harvest_all():
