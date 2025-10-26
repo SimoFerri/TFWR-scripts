@@ -12,6 +12,17 @@ entity_ground = {
     Entities.Sunflower: Grounds.Soil
 }
 
+# This dictionary represent for each Entity the Item which is obtained by its harvesting
+entity_item = {
+	Entities.Grass: Items.Hay,
+	Entities.Bush: Items.Wood,
+	Entities.Tree: Items.Wood,
+	Entities.Carrot: Items.Carrot,
+	Entities.Pumpkin: Items.Pumpkin,
+	Entities.Cactus: Items.Cactus,
+	Entities.Sunflower: Items.Power
+}
+
 # Sets the drone position at the specified coordinates
 def set_position(x, y):
     ws = get_world_size()
