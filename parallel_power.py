@@ -74,7 +74,9 @@ def produce_power(target):
 		
 		for _ in range(get_world_size()):
 			for _ in range(get_world_size()):
-				positions.append([measure(), get_pos_x(), get_pos_y()])
+                while measure() == None:
+                    continue
+                positions.append([measure(), get_pos_x(), get_pos_y()])
 				move(North)
 			move(East)	
 		
