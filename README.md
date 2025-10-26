@@ -20,5 +20,3 @@ The main goal is to approach each challenge with a professional and methodical m
 - **Solution profiling**: test and profile different approaches to evaluate their efficiency and scalability.
 - **Reporting**: create detailed reports summarizing the analysis, models, and results for each problem tackled.<br>
 
-
-This structured workflow bridges academic learning and real-world software development, ensuring clarity, performance, and continuous improvement throughout the project.
