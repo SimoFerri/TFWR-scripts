@@ -23,6 +23,31 @@ entity_item = {
 	Entities.Sunflower: Items.Power
 }
 
+# This dictonary represent for each Item the amount under which start its production
+item_min = {
+	Items.Hay: 100000,
+	Items.Wood: 100000,
+	Items.Carrot: 100000,
+	Items.Pumpkin: 100000,
+	Items.Cactus: 100000,
+	Items.Gold: 1000000,
+	Items.Power: 30000
+}
+
+# This dictonary represent for each Item the target amount of its production
+item_target = {
+	Items.Hay: 1000000,
+	Items.Wood: 1000000,
+	Items.Carrot: 1000000,
+	Items.Pumpkin: 1000000,
+	Items.Cactus: 1000000,
+	Items.Gold: 10000000,
+	Items.Power: 500000
+}
+
+# This tuple contains the Entities which can be planted using polycolture
+poly_entities = (Entities.Grass, Entities.Bush, Entities.Carrot)
+
 # Sets the drone position at the specified coordinates
 def set_position(x, y):
     ws = get_world_size()
