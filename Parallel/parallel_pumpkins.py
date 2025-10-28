@@ -8,6 +8,8 @@ import utils
 # This plants all the Pumpkins in a column, this is executed by a "Worker Drone"
 def plant_pump_col():
 	for _ in range(get_world_size()):
+        if num_items(Items.Power) < utils.item_min[Items.Power]:
+			return
 		harvest()
 		if get_ground_type() != Grounds.Soil:
 			till()
@@ -33,6 +35,8 @@ def plant_pump():
 # This replace all Dead_Pumpkins with a Pumpkin in a column
 def remove_dead_pump_col():
 	for _ in range(get_world_size()):
+        if num_items(Items.Power) < utils.item_min[Items.Power]:
+			return
 		while not can_harvest():
 			if get_entity_type() == Entities.Dead_Pumpkin:
 				plant(Entities.Pumpkin)
@@ -56,7 +60,8 @@ def remove_dead_pump():
 # This wraps up the Pumpkin production
 def produce_pump():
 	change_hat(Hats.Purple_Hat)
-	plant_pump()
-	remove_dead_pump()
-	harvest()
-	
+    while num_items(Items.Pumpkin) < utils.item_target[Items.Pumpkin]:
+        plant_pump()
+        remove_dead_pump()
+        harvest()
+        

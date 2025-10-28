@@ -61,10 +61,10 @@ def harvest_sf(positions):
 		
 # This function wraps up the Power production taking as argument the target amount of
 # Power that the user wants to acheive
-def produce_power(target):
+def produce_power():
 	set_world_size(8)
 	change_hat(Hats.Straw_Hat)
-	while num_items(Items.Power) < target:
+	while num_items(Items.Power) < :utils.item_target[Items.Power]
 		positions = []
 		for _ in range(get_world_size()):
 			while num_drones() >= max_drones():
